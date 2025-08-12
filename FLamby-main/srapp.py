@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from data_loader import load_data
 from encryption import encrypt_matrix, decrypt_vector, pubkey, privkey
-from benford import benford_score, plot_benford_histogram
+from benford import benford_score
 from anomaly_utils import z_score_anomaly_score
 import time
 
@@ -61,11 +61,11 @@ for i, score in enumerate(benford_scores):
     st.write(f"Column {i}: {score:.4f}")
 
 # Plot compliant columns
-if cols_to_plot:
-    st.markdown("### 🔎 Benford Compliant Columns")
-    for col in cols_to_plot:
-        fig = plot_benford_histogram(X[:, col], column_index=col)
-        st.pyplot(fig)
+#if cols_to_plot:
+ #   st.markdown("### 🔎 Benford Compliant Columns")
+  #  for col in cols_to_plot:
+   #     fig = plot_benford_histogram(X[:, col], column_index=col)
+    #    st.pyplot(fig)
 
 # Z-Score anomaly detection
 st.subheader("📈 Z-Score Anomaly Detection")
