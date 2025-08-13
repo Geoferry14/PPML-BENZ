@@ -10,7 +10,7 @@ print("🚀 Starting main pipeline...")
 X, y = load_data(center=0)
 
 # Use a small batch to keep encryption fast
-X = X[:50]          # 3 patients
+X = X[:3]          # 3 patients
 X = X[:, :20]      # 10 features per patient
 y = y[:3]
 
